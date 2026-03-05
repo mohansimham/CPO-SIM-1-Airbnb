@@ -194,6 +194,13 @@ body{font-family:'Inter',sans-serif;background:var(--light);color:var(--text);li
 .learn-card .learn-example{background:var(--light);border-radius:10px;padding:16px;margin-top:14px;}
 .learn-card .learn-example h4{font-size:.82em;font-weight:700;color:var(--navy);margin-bottom:6px;}
 .learn-card .learn-example p{font-size:.85em;color:var(--muted);margin-bottom:0;font-style:italic;}
+.learn-card .learn-framework{background:#1a1a2e;border-radius:10px;padding:18px 20px;margin-top:14px;border-left:3px solid var(--accent);}
+.learn-card .learn-framework h4{font-size:.82em;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;}
+.learn-card .learn-framework ol{list-style:none;padding:0;margin:0;counter-reset:fw;}
+.learn-card .learn-framework ol li{counter-increment:fw;font-size:.84em;color:rgba(255,255,255,.75);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.06);line-height:1.5;}
+.learn-card .learn-framework ol li:last-child{border-bottom:none;}
+.learn-card .learn-framework ol li::before{content:counter(fw) ". ";color:var(--accent);font-weight:700;}
+.learn-card .learn-framework ol li span{color:rgba(255,255,255,.4);font-size:.9em;}
 .learn-nav{display:flex;justify-content:space-between;align-items:center;margin-top:24px;}
 .learn-dots{display:flex;gap:8px;}
 .learn-dot{width:10px;height:10px;border-radius:50%;background:var(--border);transition:background .2s;}
@@ -355,6 +362,18 @@ footer a{color:#556677;text-decoration:none;}
         <h4>Example</h4>
         <p>Should Airbnb expand into hotels? A short-term revenue play might dilute the brand that makes Airbnb unique — the strategic thinker weighs both sides before deciding.</p>
       </div>
+      <div class="learn-framework">
+        <h4>Strategic Decision Framework</h4>
+        <ol>
+          <li>Define the decision <span>— What exactly are we choosing between?</span></li>
+          <li>Map second-order effects <span>— If we do X, what does that enable or prevent later?</span></li>
+          <li>Identify reversibility <span>— Is this a one-way door or a two-way door?</span></li>
+          <li>Time horizon test <span>— What's the 1-year, 3-year, 10-year impact?</span></li>
+          <li>Opportunity cost <span>— What are we NOT doing by choosing this?</span></li>
+          <li>Stakeholder impact map <span>— Who wins, who loses, who's indifferent?</span></li>
+          <li>Worst-case scenario <span>— If this fails completely, can we survive it?</span></li>
+        </ol>
+      </div>
       <div class="learn-nav">
         <span class="learn-counter">1 of 4</span>
         <div class="learn-dots"><span class="learn-dot active"></span><span class="learn-dot"></span><span class="learn-dot"></span><span class="learn-dot"></span></div>
@@ -374,6 +393,17 @@ footer a{color:#556677;text-decoration:none;}
       <div class="learn-example">
         <h4>Example</h4>
         <p>A city threatens to ban Airbnb unless listings are capped. Hosts want freedom, guests want supply, regulators want compliance — the PM must find a path that keeps the platform viable.</p>
+      </div>
+      <div class="learn-framework">
+        <h4>Stakeholder Mapping Template</h4>
+        <ol>
+          <li>List all affected stakeholders <span>— Internal (eng, sales, legal) + external (users, regulators, partners).</span></li>
+          <li>Map Power vs Interest <span>— High power + high interest = manage closely. Low both = monitor.</span></li>
+          <li>Identify decision rights <span>— Who has veto power? Who has input rights? Who's informed only?</span></li>
+          <li>Define communication cadence <span>— Weekly updates, milestone reviews, or escalation-only?</span></li>
+          <li>Surface hidden conflicts <span>— Where do stakeholder goals contradict each other?</span></li>
+          <li>Build the DACI <span>— Driver, Approver, Contributors, Informed for each decision.</span></li>
+        </ol>
       </div>
       <div class="learn-nav">
         <span class="learn-counter">2 of 4</span>
@@ -395,6 +425,18 @@ footer a{color:#556677;text-decoration:none;}
         <h4>Example</h4>
         <p>A guest reports a safety incident at an Airbnb property. Do you quietly handle it, or publicly change policy? The risk of inaction (more incidents, media exposure) vs. the risk of overreaction (host backlash) both need weighing.</p>
       </div>
+      <div class="learn-framework">
+        <h4>Risk Assessment Matrix</h4>
+        <ol>
+          <li>Identify risks <span>— Brainstorm: what could go wrong? Technical, legal, reputational, financial.</span></li>
+          <li>Rate likelihood <span>— Low / Medium / High probability of occurring.</span></li>
+          <li>Rate impact <span>— Low / Medium / High severity if it does occur.</span></li>
+          <li>Plot the matrix <span>— High likelihood + high impact = act now. Low both = accept.</span></li>
+          <li>Define mitigation actions <span>— For top risks: prevent, reduce, transfer, or accept?</span></li>
+          <li>Set trigger points <span>— At what signal do you activate contingency plans?</span></li>
+          <li>Assign owners <span>— Every risk has one person accountable for monitoring it.</span></li>
+        </ol>
+      </div>
       <div class="learn-nav">
         <span class="learn-counter">3 of 4</span>
         <div class="learn-dots"><span class="learn-dot"></span><span class="learn-dot"></span><span class="learn-dot active"></span><span class="learn-dot"></span></div>
@@ -414,6 +456,18 @@ footer a{color:#556677;text-decoration:none;}
       <div class="learn-example">
         <h4>Example</h4>
         <p>Airbnb Experiences is growing slowly but has passionate users. Do you double down or reallocate resources to the core business? There's no formula — this is where judgment matters.</p>
+      </div>
+      <div class="learn-framework">
+        <h4>Decision Quality Checklist</h4>
+        <ol>
+          <li>Data check <span>— What does quantitative evidence say? What's the sample size?</span></li>
+          <li>Qualitative signal <span>— What are users saying that data doesn't capture?</span></li>
+          <li>Conviction vs consensus <span>— Am I agreeing because I believe it or because others do?</span></li>
+          <li>Reversibility test <span>— If I'm wrong, can I undo this? What's the cost of reversal?</span></li>
+          <li>Pre-mortem <span>— Assume it failed. Why did it fail? What did I miss?</span></li>
+          <li>Advisor test <span>— What would I tell a peer in this exact situation?</span></li>
+          <li>Ship-or-kill deadline <span>— Set a time limit. Decide by then or default to no.</span></li>
+        </ol>
       </div>
       <div class="learn-nav">
         <span class="learn-counter">4 of 4</span>
